@@ -1,0 +1,166 @@
+public void ReverseLinkedList() {
+    public List<node> Holder = new List<node>;
+    public node Runner = Self.Head;
+
+    if (self.head == null) {
+        return;
+    }
+    else {
+        while (Runner.next != null ) {
+            Holder.Add(Runner);
+            Runner = Runner.Next;
+        }
+
+        Self.Head = Runner;
+        for (int i = Holder.Count -1; i >= 0; i--) {
+            Runner.Next = i;
+        }
+    }
+}
+
+
+public class BST 
+{
+    node Head = null;
+
+
+    public void Add (node thisNode, node position = this.Head) {
+        if (thisNode.val > position.val  && thisNode.right =! null) {
+            Add(thisNode, thisNode.right);
+        }
+
+        if (thisNode.val < position.val && thisNode.Left =! null) {
+            Add(thisNode, thisNode.left);
+        }
+
+        if (thisNode.val > position.val) {
+            position.right = thisNode;
+        }
+
+        else {
+            position.left = thisNode;
+        }
+    }
+
+
+
+    public int Size(int count=0, node position = this.head) {
+        if (position == null ||(position.right == null && position.left == null) {
+            return count;
+        }
+        else {
+            count = count ++;
+            if(position.right != null ) {
+                Size(count, position.right)
+            }
+            if(position.left != null ) {
+                Size(count, position.left)
+            }
+        }
+    }    
+
+}
+
+public class BSTNode
+{
+    var val;
+    node right = null;
+    node left = null;
+
+    public BSTNost(val) {
+        self = this;
+        self.val = val;
+    }
+}
+
+
+
+
+public class Graph (int NodeCount, int[] values)
+{
+    Node[] points = new Node[NodeCount];
+
+    for(var i=0; i < points.length; i++) {
+        points[i] = new SLL() {value = values[i]}
+    }
+}
+
+public class AddEdgeUn(int start, int finish)
+{
+    node start = null;
+    node finish = null;
+
+    for(var i=0;i<points.length;i++){
+        if(start != null && finish != null) {
+            break;
+        }
+        else {
+        if (points[i] == start){
+        start = points[i];
+            }
+        if (points[i] == finish) {
+        finish = points[i];
+            }
+        }
+
+        node Runner = start;
+        while(Runner.next != null) {
+            Runner = Runner.next;
+        }
+        Runner.next = finish;
+
+        node Runner = finish;
+        while(Runner.next != null) {
+            Runner = Runner.next;
+        }
+        Runner.next = start;
+}
+
+}
+
+public class AddEdgeDir(int start, int finish)
+{
+     node start = null;
+    node finish = null;
+
+    for(var i=0;i<points.length;i++){
+        if(start != null && finish != null) {
+            break;
+        }
+        else {
+        if (points[i] == start){
+        start = points[i];
+            }
+        if (points[i] == finish) {
+        finish = points[i];
+            }
+        }
+
+        node Runner = start;
+        while(Runner.next != null) {
+            Runner = Runner.next;
+        }
+        Runner.next = finish;
+}
+
+1)
+o(n) - because it will always provide a direct route to the target, so you will 
+just have to make it that far down the tree.
+
+2)
+directed edges define which directions connections can travel, undirected allows 
+for bidirectional pathing.
+
+3)
+weighted edges will provide data that can be used as a conditional to determine 
+whether or not the edge is traversable within the paramaters,
+ or to collect data along the path.
+
+4)
+Breadth first searching will search a complete horizonal plane before moving 
+down to the next level, it will continue to bounce up and down untill all nodes on
+the current plane have been evaluated, it will then move down a level and repeat.
+
+Depth first seatching will take a route and follow it all the way to the bottom, 
+it will then back up to the next branch and do the same, it will continue untill 
+all nodes have been evaluated.
